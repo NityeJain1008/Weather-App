@@ -28,6 +28,13 @@ body::before{
     backdrop-filter: blur(10px);
 }
 
+/* UTILITY CLASSES STARTS */
+.regular-txt{
+    font-weight: 600;
+}
+/* UTILITY CLASSES ENDS */
+
+
 .main-container{
     /* border: solid ; */
     width: 500px ; 
@@ -43,9 +50,7 @@ body::before{
 .input-container{
     display: flex;
     position: relative;
-    /* flex-direction: column; */
-    /* gap: 10px; */
-    /* margin-top: 20px; */
+    margin-bottom: 35px;
 }
 
 .city-input{
@@ -61,6 +66,7 @@ body::before{
     transition: 0.25s border;
     padding-right: 52px;
 }
+
 .city-input:focus{
     border: 2px solid rgba(0, 0, 0, 0.45);
 }
@@ -84,3 +90,41 @@ body::before{
 }
 /* INPUT CONTAINER ENDS  */
 
+/* WEATHER INFO STARTS  */
+.weather-info{
+    /* border: solid; */
+    width: 100%;
+    
+}
+
+.location-date-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    /* height: 40px; */
+} 
+
+.location{
+    /* border: solid green; */
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.location .material-symbols-outlined {
+    font-size: 35px;
+    /* border: solid red; */
+}
+
+.country-txt {
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+.current-date-txt {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* WEATHER INFO ENDS  */
