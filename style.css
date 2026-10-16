@@ -94,7 +94,10 @@ body::before{
 .weather-info{
     /* border: solid; */
     width: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    gap : 20px;
+    /* border: solid ;  */
 }
 
 .location-date-container{
@@ -103,6 +106,7 @@ body::before{
     align-items: center;
     /* margin-bottom: 20px; */
     /* height: 40px; */
+    padding: 0px 20px;
 } 
 
 .location{
@@ -125,6 +129,27 @@ body::before{
 .current-date-txt {
     font-size: 20px;
     font-weight: 900;
+}
+
+.weather-summary-container{
+    /* border: solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    gap: 20px;
+}
+
+.weather-summary-img{
+    width: 140px;
+    height: 140px;
+}
+
+.weather-summary-info{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    text-align: right;
 }
 
 /* WEATHER INFO ENDS  */
