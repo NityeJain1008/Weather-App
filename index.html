@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <!-- Google Icons link -->
 
     <link rel="stylesheet"
@@ -25,7 +26,7 @@
             </button>
         </header>
 
-        <section class="weather-info">
+        <section class="weather-info" style="display: none;">
             <div class="location-date-container">
                 <div class="location">
                     <span class="material-symbols-outlined">
@@ -87,9 +88,25 @@
                     <img src="assets/weather/thunderstorm.svg" alt="" class="forecast-item-img">
                     <h5 class="forecast-item-temp">28 °C</h5>
                 </div>
-                
-
             </div>
+        </section>
+
+        <section class="search-city section-message">
+            <img src="assets/message/search-city.png">
+
+            <h1>Search City</h1>
+            <h4 class="regular-txt">
+                Just type the name of the city and click the search button.
+            </h4>
+        </section>
+
+        <section class="not-found section-message" style="display: none;">
+            <img src="assets/message/not-found.png">
+
+            <h1>City Not Found</h1>
+            <h4 class="regular-txt">
+                The city you are looking for is not found. Please try again with a different city name.
+            </h4>
         </section>
     </main>
 </body>
