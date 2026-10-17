@@ -6,6 +6,8 @@
     box-sizing: border-box;
     font-family: "Manrope", sans-serif;
     color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 body{
@@ -151,5 +153,36 @@ body::before{
     /* gap: 10px; */
     text-align: right;
 }
+
+.weather-condition-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    flex-direction: row;
+}
+
+.condition-item{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    /* border: solid; */
+    align-items: center;
+    gap: 10px;
+}
+
+.condition-item span {
+    font-size: 35px;
+}
+
+.condition-info{
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: solid ; */
+}
+
+
+
 
 /* WEATHER INFO ENDS  */
