@@ -165,9 +165,10 @@ body::before{
     display: flex;
     /* flex-direction: column; */
     gap: 10px;
-    /* border: solid; */
     align-items: center;
     gap: 10px;
+    /* border: solid; */
+    padding: 10px 0px;
 }
 
 .condition-item span {
@@ -182,7 +183,43 @@ body::before{
     /* border: solid ; */
 }
 
+.forecast-items-container{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 13px ;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 11px;
+}
+
+.forecast-items-container::-webkit-scrollbar{
+    /* display: none; */
+    height: 8px;
+}
+.forecast-items-container::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 99px;
+}
+.forecast-items-container::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 99px;
+}
 
 
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: solid;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    border-radius: 18px;
+    transition: 0.25s background;
+}
+
+.forecast-item:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
 
 /* WEATHER INFO ENDS  */
