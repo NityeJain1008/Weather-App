@@ -76,16 +76,6 @@ weather-app/
 4. The forecast section shows upcoming forecast entries.
 5. Air-quality information can be retrieved separately through OpenWeather's Air Pollution API using latitude and longitude.
 
-## Future Improvements
-
-- Add a loading indicator while requests are in progress.
-- Improve handling of invalid city names and network/API errors.
-- Add a Celsius/Fahrenheit toggle.
-- Add sunrise and sunset times.
-- Add hourly forecasts and precipitation probability.
-- Add current-location weather using browser geolocation.
-- Improve accessibility and mobile layouts.
-
 ## Author
 
 **Nitye Jain**
