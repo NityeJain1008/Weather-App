@@ -157,30 +157,37 @@ body::before{
 .weather-condition-container{
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
+    gap: 12px;
+    padding: 0px 10px;
     flex-direction: row;
 }
 
 .condition-item{
     display: flex;
     /* flex-direction: column; */
-    gap: 10px;
+    gap: 6px;
     align-items: center;
-    gap: 10px;
     /* border: solid; */
     padding: 10px 0px;
 }
 
 .condition-item span {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .condition-info{
-    font-size: 23px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* border: solid ; */
+}
+
+.weather-condition-container .condition-item:nth-child(2) .condition-info h5:last-child{
+    width: fit-content;
+    padding: 2px 7px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .forecast-items-container{
