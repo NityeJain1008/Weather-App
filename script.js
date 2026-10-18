@@ -31,12 +31,14 @@ cityInput.addEventListener("keydown", (e) => {
     }
 });
 
- async function getFetchData(endPoint, city){
+async function getFetchData(endPoint, city){
     const apiUrl = `https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${apiKey}&units=metric`;
     const response = await fetch(apiUrl);
 
     return response.json();
 }
+
+
 
 async function updateWeatherInfo(city){
     const weatherData = await getFetchData("weather", city); 
@@ -57,11 +59,13 @@ async function updateWeatherInfo(city){
         wind : {speed}
     } = weatherData;
 
-    countryTxt.innerText = country;
-    // tempTxt.innerText = `${temp}°C`;
-    // conditionTxt.innerText = main;
-    // humidityValueTxt.innerText = `${humidity}%`;
-    // windValueTxt.innerText = `${speed}m/s`;
+    countryTxt.textContent = country;
+    tempTxt.textContent = `${temp}°C`; 
+    conditionTxt.textContent = main ;
+    humidityValueTxt.textContent = humidity + "%";
+    windValueTxt.textContent = `${speed}m/s`;
+
+    weatherSummaryImg.src = `assets/weather/${getWeatherIcon(id)}`;
 }
 
 function showDisplaySection(section){
