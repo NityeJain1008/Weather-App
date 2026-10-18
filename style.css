@@ -211,7 +211,7 @@ body::before{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    border: solid;
+    /* border: solid; */
     background: rgba(255, 255, 255, 0.15);
     padding: 30px 20px;
     border-radius: 18px;
