@@ -38,7 +38,27 @@ async function getFetchData(endPoint, city){
     return response.json();
 }
 
+function getWeatherIcon(id){
+    if(id == 800){
+        return "clear.svg";
+    }else if(id >= 200 && id <= 232){
+        return "storm.svg";
+    }else if(id >= 600 && id <= 622){
+        return "snow.svg";
+    }else if(id >= 701 && id <= 781){
+        return "haze.svg";
+    }else if(id >= 801 && id <= 804){
+        return "clouds.svg";
+    }else if((id >= 500 && id <= 531) || (id >= 300 && id <= 321)){
+        return "rain.svg";
+    }
+}
 
+function getCurrentDate(){
+    const currentDate = new Date();
+    const options = { weekday: "long", month: "long", day: "numeric" };
+    return currentDate.toLocaleDateString('en-IN', options);
+}
 
 async function updateWeatherInfo(city){
     const weatherData = await getFetchData("weather", city); 
@@ -64,6 +84,8 @@ async function updateWeatherInfo(city){
     conditionTxt.textContent = main ;
     humidityValueTxt.textContent = humidity + "%";
     windValueTxt.textContent = `${speed}m/s`;
+
+    currentDateTxt.textContent = getCurrentDate();
 
     weatherSummaryImg.src = `assets/weather/${getWeatherIcon(id)}`;
 }
