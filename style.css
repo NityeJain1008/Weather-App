@@ -256,3 +256,107 @@ body::before{
 
 
 /* Message section ends */
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        min-height: 100svh;
+        padding: 16px 0;
+    }
+
+    body::before {
+        height: 100%;
+        min-height: 100svh;
+    }
+
+    .main-container {
+        width: calc(100% - 24px);
+        max-width: 500px;
+        height: auto;
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .search-btn {
+        left: auto;
+        right: 10px;
+    }
+
+    .location-date-container,
+    .weather-summary-container {
+        padding: 0;
+    }
+
+    .country-txt {
+        font-size: 20px;
+    }
+
+    .current-date-txt {
+        font-size: 15px;
+    }
+
+    .weather-summary-container {
+        gap: 10px;
+    }
+
+    .weather-summary-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .weather-condition-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 0;
+    }
+
+    .condition-item {
+        min-width: 0;
+        gap: 4px;
+    }
+
+    .condition-info {
+        min-width: 0;
+        font-size: 14px;
+    }
+
+    .forecast-item {
+        flex: 0 0 auto;
+        padding: 20px 14px;
+    }
+
+    .section-message {
+        margin-top: 0;
+        padding: 0 8px;
+    }
+
+    .section-message img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-container {
+        padding: 12px;
+    }
+
+    .location-date-container {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .current-date-txt {
+        text-align: right;
+    }
+
+    .weather-summary-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .condition-item span {
+        font-size: 24px;
+    }
+}
